@@ -2,7 +2,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { StarIcon } from '@heroicons/react/24/solid';
 
-const properties = [
+interface Property {
+  id: number;
+  title: string;
+  location: string;
+  price: number;
+  rating: number;
+  reviews: number;
+  image: string;
+  features: string[];
+}
+
+const properties: Property[] = [
   {
     id: 1,
     title: 'Luxury Villa in Santorini',
@@ -61,7 +72,7 @@ export default function FeaturedProperties() {
                 <div className="relative h-48">
                   <Image
                     src={property.image}
-                    alt={property.title || 'Property image'}
+                    alt={property.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
