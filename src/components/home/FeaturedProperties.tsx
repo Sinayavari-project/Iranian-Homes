@@ -61,7 +61,7 @@ export default function FeaturedProperties() {
                 <div className="relative h-48">
                   <Image
                     src={property.image}
-                    alt={property.title}
+                    alt={property.title || 'Property image'}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />

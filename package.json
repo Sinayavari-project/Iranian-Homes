@@ -9,13 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@eslint/js": "8.56.0",
     "@hookform/resolvers": "5.0.1",
     "@prisma/client": "^6.6.0",
     "@supabase/supabase-js": "^2.49.4",
     "@types/react-datepicker": "6.2.0",
     "date-fns": "4.1.0",
-    "eslint": "8.56.0",
     "glob": "10.3.10",
     "next": "14.1.0",
     "next-auth": "^4.24.11",
@@ -39,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "10.4.17",
+    "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "postcss": "8.4.35",
     "prisma": "^6.6.0",
