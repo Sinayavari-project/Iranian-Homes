@@ -1,62 +1,46 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="relative h-[600px]">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/hero-bg.jpg"
-          alt="International Homes Hero"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </div>
-
-      {/* Content */}
-      <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Discover Your Perfect International Getaway
-          </h1>
-          <p className="text-xl text-white/90 mb-8">
-            Find and book unique accommodations in the world's most beautiful destinations
-          </p>
-          
-          {/* Search Box */}
-          <div className="bg-white rounded-xl p-4 shadow-lg">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="flex-1">
-                <input
-                  type="text"
-                  placeholder="Search for destinations..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div className="flex-1">
-                <input
-                  type="text"
-                  placeholder="Check-in date"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <div className="flex-1">
-                <input
-                  type="text"
-                  placeholder="Check-out date"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-              </div>
-              <button className="btn-primary whitespace-nowrap">
-                Search
-              </button>
-            </div>
+    <section className="relative h-[70vh] min-h-[600px]">
+      <Image
+        src="/images/placeholder-1.jpg.jpg"
+        alt="International Homes Hero"
+        fill
+        className="object-cover"
+        priority
+      />
+      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Discover Your Perfect International Getaway
+        </h1>
+        <p className="text-xl md:text-2xl mb-8">
+          Find and book unique accommodations in the world&apos;s most beautiful destinations
+        </p>
+        <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-4">
+          <div className="flex flex-col md:flex-row gap-4">
+            <input
+              type="text"
+              placeholder="Search for destinations..."
+              className="flex-1 p-3 rounded border text-gray-800"
+            />
+            <input
+              type="date"
+              placeholder="Check-in date"
+              className="p-3 rounded border text-gray-800"
+            />
+            <input
+              type="date"
+              placeholder="Check-out date"
+              className="p-3 rounded border text-gray-800"
+            />
+            <button className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors">
+              Search
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 } 
