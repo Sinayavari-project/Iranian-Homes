@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "properties": "اقامتگاه‌ها",
+    "villas": "ویلاها",
+    "apartments": "آپارتمان‌ها",
+    "login": "ورود / ثبت‌نام"
+  },
+  "auth": {
+    "login": {
+      "title": "ورود به حساب کاربری",
+      "email": "ایمیل",
+      "password": "رمز عبور",
+      "rememberMe": "مرا به خاطر بسپار",
+      "forgotPassword": "رمز عبور را فراموش کرده‌اید؟",
+      "noAccount": "حساب کاربری ندارید؟",
+      "register": "ثبت‌نام کنید",
+      "submit": "ورود"
+    }
+  },
+  "common": {
+    "search": "جستجو",
+    "checkIn": "تاریخ ورود",
+    "checkOut": "تاریخ خروج",
+    "destinations": "جستجوی مقاصد..."
+  }
+} 
