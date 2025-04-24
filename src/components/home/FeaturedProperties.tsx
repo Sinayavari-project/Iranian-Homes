@@ -25,7 +25,7 @@ const properties = [
   },
   {
     id: 3,
-    name: 'Beachfront Villa in Maldives',
+    title: 'Beachfront Villa in Maldives',
     location: 'Maldives',
     price: 450,
     rating: 4.7,
