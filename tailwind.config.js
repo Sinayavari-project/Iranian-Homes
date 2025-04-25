@@ -10,6 +10,9 @@ module.exports = {
       colors: {
         primary: '#2563eb',
       },
+      fontFamily: {
+        arabic: ['Vazirmatn', 'sans-serif'],
+      },
     },
   },
   plugins: [],

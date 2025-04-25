@@ -1,5 +1,10 @@
 import Link from 'next/link';
+import { IconType } from 'react-icons';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
+const SocialIcon = ({ Icon }: { Icon: IconType }) => (
+  <Icon className="w-6 h-6" />
+);
 
 const Footer = () => {
   return (
@@ -78,7 +83,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaFacebook className="w-6 h-6" />
+                <SocialIcon Icon={FaFacebook} />
               </a>
               <a
                 href="https://twitter.com"
@@ -86,7 +91,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaTwitter className="w-6 h-6" />
+                <SocialIcon Icon={FaTwitter} />
               </a>
               <a
                 href="https://instagram.com"
@@ -94,7 +99,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaInstagram className="w-6 h-6" />
+                <SocialIcon Icon={FaInstagram} />
               </a>
               <a
                 href="https://linkedin.com"
@@ -102,7 +107,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaLinkedin className="w-6 h-6" />
+                <SocialIcon Icon={FaLinkedin} />
               </a>
             </div>
             <div className="mt-4">
