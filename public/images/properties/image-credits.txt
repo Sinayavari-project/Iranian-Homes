@@ -1,0 +1,55 @@
+International Property Images Credits:
+
+Hero Image:
+Image: https://images.unsplash.com/photo-1501785888041-af3ef285b470
+Credit: Sasha Kaunas on Unsplash
+
+Featured Properties:
+1. Luxury Beachfront Villa (Bali, Indonesia)
+Image: https://images.unsplash.com/photo-1537640538966-79f369143f8f
+Credit: Alex Azabache on Unsplash
+
+2. Elegant Parisian Penthouse (Paris, France)
+Image: https://images.unsplash.com/photo-1549877452-9c387954fbc2
+Credit: Fred Kleber on Unsplash
+
+3. Traditional Machiya House (Kyoto, Japan)
+Image: https://images.unsplash.com/photo-1480796927426-f609979314bd
+Credit: Sorasak on Unsplash
+
+4. Luxury Manhattan Apartment (New York, USA)
+Image: https://images.unsplash.com/photo-1522708323590-d24dbb6b0267
+Credit: Roberto Nickson on Unsplash
+
+Popular Destinations:
+1. Paris, France
+Image: https://images.unsplash.com/photo-1502602898657-3e91760cbb34
+Credit: Chris Karidis on Unsplash
+
+2. Bali, Indonesia
+Image: https://images.unsplash.com/photo-1558005530-a7958896ec60
+Credit: Artem Beliaikin on Unsplash
+
+3. Tokyo, Japan
+Image: https://images.unsplash.com/photo-1536098561742-ca998e48cbcc
+Credit: Jezael Melgoza on Unsplash
+
+4. New York, USA
+Image: https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9
+Credit: Anthony DELANOIX on Unsplash
+
+5. Rome, Italy
+Image: https://images.unsplash.com/photo-1552832230-c0197dd311b5
+Credit: David Köhler on Unsplash
+
+6. Dubai, UAE
+Image: https://images.unsplash.com/photo-1512453979798-5ea266f8880c
+Credit: David Rodrigo on Unsplash
+
+All images are used under the Unsplash License:
+https://unsplash.com/license
+
+Last Updated: 2024
+
+Note: All images are placeholder images for demonstration purposes only.
+Please replace with actual property images before deploying to production. 

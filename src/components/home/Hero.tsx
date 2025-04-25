@@ -24,21 +24,21 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative h-[70vh] min-h-[600px]">
+    <div className="relative h-[600px]">
       <Image
-        src="/images/placeholder-1.jpg.jpg"
+        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1920&q=80"
         alt="International Homes Hero"
         fill
-        className="object-cover"
         priority
+        className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black bg-opacity-40" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
           Discover Your Perfect International Getaway
         </h1>
-        <p className="text-xl md:text-2xl mb-8">
-          Find and book unique accommodations in the world&apos;s most beautiful destinations
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl">
+          Find and book unique accommodations in the world's most beautiful destinations
         </p>
         <div className="w-full max-w-4xl bg-white rounded-lg shadow-lg p-4">
           <div className="flex flex-col md:flex-row gap-4">
@@ -84,6 +84,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 } 
