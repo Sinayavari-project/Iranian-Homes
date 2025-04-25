@@ -43,3 +43,5 @@ next-env.d.ts
 *.userosscache
 *.sln.docstates
 *.vbproj
+
+.vercel

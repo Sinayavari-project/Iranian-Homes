@@ -78,7 +78,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaFacebook size={24} />
+                <FaFacebook className="w-6 h-6" />
               </a>
               <a
                 href="https://twitter.com"
@@ -86,7 +86,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaTwitter size={24} />
+                <FaTwitter className="w-6 h-6" />
               </a>
               <a
                 href="https://instagram.com"
@@ -94,7 +94,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaInstagram size={24} />
+                <FaInstagram className="w-6 h-6" />
               </a>
               <a
                 href="https://linkedin.com"
@@ -102,7 +102,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <FaLinkedin size={24} />
+                <FaLinkedin className="w-6 h-6" />
               </a>
             </div>
             <div className="mt-4">
