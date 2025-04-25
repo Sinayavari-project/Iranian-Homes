@@ -1,16 +1,22 @@
+'use client';
+
 import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const SocialIcon = ({ Icon }: { Icon: IconType }) => (
-  <Icon className="w-6 h-6" />
-);
+const SocialIcon = ({ Icon }: { Icon: IconType }) => {
+  const IconComponent = Icon;
+  return <IconComponent className="w-6 h-6" />;
+};
 
-const Footer = () => {
+export default function Footer() {
+  const { language } = useLanguage();
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-4 gap-8 ${language === 'fa' ? 'font-arabic text-right' : ''}`}>
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Global Homes</h3>
@@ -126,6 +132,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

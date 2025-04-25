@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const currentLocale = pathname.startsWith('/fa') ? 'fa' : 'en';
   const [isOpen, setIsOpen] = useState(false);
+  const { language } = useLanguage();
 
   const switchLanguage = (locale: string) => {
     const newPath = pathname.replace(/^\/[a-z]{2}/, `/${locale}`);
