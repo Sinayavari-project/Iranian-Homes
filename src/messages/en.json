@@ -7,14 +7,14 @@
   },
   "auth": {
     "login": {
-      "title": "Login to your account",
-      "email": "Email",
+      "title": "Sign in to your account",
+      "noAccount": "Don't have an account?",
+      "register": "Register",
+      "email": "Email address",
       "password": "Password",
       "rememberMe": "Remember me",
       "forgotPassword": "Forgot your password?",
-      "noAccount": "Don't have an account?",
-      "register": "Register",
-      "submit": "Login"
+      "submit": "Sign in"
     }
   },
   "common": {
