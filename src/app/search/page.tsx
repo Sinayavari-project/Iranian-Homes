@@ -13,45 +13,112 @@ interface Property {
   image: string;
 }
 
+const mockProperties = [
+  {
+    id: 1,
+    title: 'Luxury Villa with Eiffel Tower View',
+    location: 'Paris, France',
+    price: 850,
+    image: '/images/cities-in-france-paris-laforet.webp',
+  },
+  {
+    id: 2,
+    title: 'Modern Apartment in Central London',
+    location: 'London, UK',
+    price: 400,
+    image: '/images/london.jpg',
+  },
+  {
+    id: 3,
+    title: 'Beachfront Villa in Bali',
+    location: 'Bali, Indonesia',
+    price: 300,
+    image: '/images/bali.jpg',
+  },
+  {
+    id: 4,
+    title: 'Luxury Penthouse in Manhattan',
+    location: 'New York City, USA',
+    price: 1200,
+    image: '/images/newyork.jpg',
+  },
+  {
+    id: 5,
+    title: 'Traditional Ryokan in Tokyo',
+    location: 'Tokyo, Japan',
+    price: 450,
+    image: '/images/tokyo.jpg',
+  },
+  {
+    id: 6,
+    title: 'Historic Apartment near Colosseum',
+    location: 'Rome, Italy',
+    price: 350,
+    image: '/images/rome.jpg',
+  },
+  {
+    id: 7,
+    title: 'Luxury Suite with Marina View',
+    location: 'Dubai, UAE',
+    price: 600,
+    image: '/images/dubai.jpg',
+  },
+  {
+    id: 8,
+    title: 'Riverside Apartment in Amsterdam',
+    location: 'Amsterdam, Netherlands',
+    price: 380,
+    image: '/images/amsterdam.jpg',
+  },
+  {
+    id: 9,
+    title: 'Beachfront Villa in Santorini',
+    location: 'Santorini, Greece',
+    price: 550,
+    image: '/images/placeholder-1.jpg.jpg',
+  },
+  {
+    id: 10,
+    title: 'Modern Loft in Barcelona',
+    location: 'Barcelona, Spain',
+    price: 320,
+    image: '/images/barcelona.jpg',
+  },
+  {
+    id: 11,
+    title: 'Luxury Condo with Harbor View',
+    location: 'Hong Kong',
+    price: 480,
+    image: '/images/hongkong.jpg',
+  },
+  {
+    id: 12,
+    title: 'Riverside Villa in Bangkok',
+    location: 'Bangkok, Thailand',
+    price: 280,
+    image: '/images/bangkok.jpg',
+  }
+];
+
 export default function SearchPage() {
   const searchParams = useSearchParams();
   const [properties, setProperties] = useState<Property[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // In a real application, you would fetch properties from your API
-    // For now, we'll simulate a search with mock data
     const location = searchParams.get('location')?.toLowerCase() || '';
     const checkIn = searchParams.get('checkIn');
     const checkOut = searchParams.get('checkOut');
 
     // Simulate API call with setTimeout
     setTimeout(() => {
-      // Mock data - in a real app, this would come from your API
-      const mockProperties = [
-        {
-          id: 1,
-          title: 'Luxury Villa in Santorini',
-          location: 'Santorini, Greece',
-          price: 350,
-          image: '/images/placeholder-1.jpg.jpg',
-        },
-        {
-          id: 2,
-          title: 'Modern Apartment in Barcelona',
-          location: 'Barcelona, Spain',
-          price: 180,
-          image: '/images/cities-in-france-paris-laforet.webp',
-        },
-        // Filter properties based on location
-        // In a real app, this would be done on the server
-      ].filter(prop => 
+      const filteredProperties = mockProperties.filter(prop => 
         !location || 
         prop.location.toLowerCase().includes(location) ||
         prop.title.toLowerCase().includes(location)
       );
 
-      setProperties(mockProperties);
+      setProperties(filteredProperties);
       setLoading(false);
     }, 1000);
   }, [searchParams]);
