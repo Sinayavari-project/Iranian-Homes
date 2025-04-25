@@ -8,11 +8,11 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={() => setLanguage(language === 'en' ? 'fa' : 'en')}
-      className="fixed top-4 right-4 z-50 px-4 py-2 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow duration-200 flex items-center space-x-2"
+      className={`fixed ${language === 'fa' ? 'left-4' : 'right-4'} top-4 z-50 px-4 py-2 bg-white rounded-full shadow-md hover:shadow-lg transition-all duration-200 flex items-center space-x-2 font-medium ${
+        language === 'fa' ? 'font-arabic' : ''
+      }`}
     >
-      <span className={`text-sm font-medium ${language === 'fa' ? 'font-arabic' : ''}`}>
-        {language === 'en' ? 'فارسی' : 'English'}
-      </span>
+      {language === 'en' ? 'فارسی' : 'English'}
     </button>
   );
 } 
