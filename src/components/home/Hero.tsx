@@ -1,6 +1,28 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import { useRouter } from 'next/navigation';
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function Hero() {
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [checkInDate, setCheckInDate] = useState<Date | null>(null);
+  const [checkOutDate, setCheckOutDate] = useState<Date | null>(null);
+
+  const handleSearch = () => {
+    // Build the search query parameters
+    const params = new URLSearchParams();
+    if (searchQuery) params.append('location', searchQuery);
+    if (checkInDate) params.append('checkIn', checkInDate.toISOString());
+    if (checkOutDate) params.append('checkOut', checkOutDate.toISOString());
+
+    // Navigate to search results page with query parameters
+    router.push(`/search?${params.toString()}`);
+  };
+
   return (
     <section className="relative h-[70vh] min-h-[600px]">
       <Image
@@ -24,18 +46,39 @@ export default function Hero() {
               type="text"
               placeholder="Search for destinations..."
               className="flex-1 p-3 rounded border text-gray-800"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <input
-              type="date"
-              placeholder="Check-in date"
-              className="p-3 rounded border text-gray-800"
-            />
-            <input
-              type="date"
-              placeholder="Check-out date"
-              className="p-3 rounded border text-gray-800"
-            />
-            <button className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors">
+            <div className="relative">
+              <DatePicker
+                selected={checkInDate}
+                onChange={(date) => setCheckInDate(date)}
+                selectsStart
+                startDate={checkInDate}
+                endDate={checkOutDate}
+                minDate={new Date()}
+                placeholderText="Check-in date"
+                className="p-3 rounded border text-gray-800 w-full"
+                dateFormat="MMM d, yyyy"
+              />
+            </div>
+            <div className="relative">
+              <DatePicker
+                selected={checkOutDate}
+                onChange={(date) => setCheckOutDate(date)}
+                selectsEnd
+                startDate={checkInDate}
+                endDate={checkOutDate}
+                minDate={checkInDate || new Date()}
+                placeholderText="Check-out date"
+                className="p-3 rounded border text-gray-800 w-full"
+                dateFormat="MMM d, yyyy"
+              />
+            </div>
+            <button 
+              className="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition-colors"
+              onClick={handleSearch}
+            >
               Search
             </button>
           </div>
