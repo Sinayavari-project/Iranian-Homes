@@ -12,7 +12,7 @@ export async function GET(request: Request) {
     console.log('MongoDB connected in API route');
 
     // Wait for connection to be ready
-    if (db.connection.readyState !== 1) {
+    if (!db || mongoose.connection.readyState !== 1) {
       throw new Error('MongoDB connection not ready');
     }
 

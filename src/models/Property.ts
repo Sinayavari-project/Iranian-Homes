@@ -28,6 +28,14 @@ export interface IProperty extends Document {
   bathrooms: number;
   area: number;
   yearBuilt: number;
+  guests: number;
+  rules: string[];
+  availability: {
+    checkInTime: string;
+    checkOutTime: string;
+    minStay: number;
+  };
+  cancellationPolicy: string;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -60,6 +68,14 @@ const PropertySchema = new Schema<IProperty>({
   bathrooms: { type: Number, required: true },
   area: { type: Number, required: true },
   yearBuilt: { type: Number },
+  guests: { type: Number, required: true, default: 2 },
+  rules: [{ type: String }],
+  availability: {
+    checkInTime: { type: String, default: '15:00' },
+    checkOutTime: { type: String, default: '11:00' },
+    minStay: { type: Number, default: 1 }
+  },
+  cancellationPolicy: { type: String, default: 'Flexible' }
 }, {
   timestamps: true,
 });

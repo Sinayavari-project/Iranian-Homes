@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { IProperty } from '@/models/Property';
 import { formatPrice } from '@/utils/format';
-import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
 
 const translations = {
   en: {
@@ -98,10 +98,10 @@ export default function PropertyProfile({ params }: { params: { id: string } }) 
   }
 
   const images = [property.mainImage, ...(property.images || [])];
-  const neighborhood = property.location?.neighborhood || '';
   const city = property.location?.city || '';
-  const stats = property.stats || { rating: 4.8, reviewCount: 24 };
-  const amenities = property.amenities || {};
+  const address = property.location?.address || '';
+  const stats = { rating: 4.8, reviewCount: 24 }; // Default stats
+  const amenities = property.amenities || [];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -165,7 +165,7 @@ export default function PropertyProfile({ params }: { params: { id: string } }) 
         <div className="mb-4">
           <h1 className="text-3xl font-bold mb-2">{property.title}</h1>
           <div className="flex items-center gap-4 text-gray-600 text-lg mb-2">
-            <span>{neighborhood}, {city}</span>
+            <span>{address}, {city}</span>
             <span className="flex items-center gap-1">★ {stats.rating} <span className="text-sm">({stats.reviewCount} reviews)</span></span>
           </div>
         </div>
@@ -175,26 +175,24 @@ export default function PropertyProfile({ params }: { params: { id: string } }) 
           <p className="text-gray-700 whitespace-pre-line">{property.description}</p>
         </div>
         {/* Amenities */}
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Amenities</h2>
-          <div className="flex flex-wrap gap-3">
-            {Array.isArray(amenities)
-              ? amenities.map((a, i) => <span key={i} className="px-3 py-1 bg-gray-100 rounded-lg text-gray-700 text-sm">{a}</span>)
-              : <>
-                  {typeof amenities.basic === 'object' && amenities.basic && Object.entries(amenities.basic as any).map(([k, v]) => v && <span key={k} className="px-3 py-1 bg-gray-100 rounded-lg text-gray-700 text-sm">{k}</span>)}
-                  {typeof amenities.outdoor === 'object' && amenities.outdoor && Object.entries(amenities.outdoor as any).map(([k, v]) => v && <span key={k} className="px-3 py-1 bg-gray-100 rounded-lg text-gray-700 text-sm">{k}</span>)}
-                  {typeof amenities.safety === 'object' && amenities.safety && Object.entries(amenities.safety as any).map(([k, v]) => v && <span key={k} className="px-3 py-1 bg-gray-100 rounded-lg text-gray-700 text-sm">{k}</span>)}
-                  {typeof amenities.convenience === 'object' && amenities.convenience && Object.entries(amenities.convenience as any).map(([k, v]) => v && <span key={k} className="px-3 py-1 bg-gray-100 rounded-lg text-gray-700 text-sm">{k}</span>)}
-                </>}
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">Amenities</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {amenities.map((amenity, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CheckIcon className="h-5 w-5 text-primary" />
+                <span>{amenity}</span>
+              </div>
+            ))}
           </div>
         </div>
         {/* Rules & Cancellation */}
-        <div className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Rules & Cancellation</h2>
-          <ul className="list-disc pl-6 text-gray-700 mb-2">
-            <li>No smoking</li>
-            <li>No parties</li>
-            <li>Pets {property.rules?.pets ? 'allowed' : 'not allowed'}</li>
+        <div className="mb-8">
+          <h2 className="text-xl font-semibold mb-4">House Rules</h2>
+          <ul className="space-y-2 text-gray-600">
+            {property.rules?.map((rule, index) => (
+              <li key={index}>{rule}</li>
+            ))}
             <li>Check-in: {property.availability?.checkInTime || '15:00'}</li>
             <li>Check-out: {property.availability?.checkOutTime || '11:00'}</li>
             <li>Cancellation: {property.cancellationPolicy || 'Flexible'}</li>
@@ -204,7 +202,7 @@ export default function PropertyProfile({ params }: { params: { id: string } }) 
         <div className="mb-6">
           <h2 className="text-xl font-semibold mb-2">Location</h2>
           <div className="w-full h-64 bg-gray-200 rounded-xl flex items-center justify-center text-gray-500">
-            Map Placeholder (Dubai, {neighborhood})
+            Map Placeholder (Dubai, {address})
           </div>
         </div>
         {/* Reviews */}
@@ -240,7 +238,7 @@ export default function PropertyProfile({ params }: { params: { id: string } }) 
           </div>
           <button className="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-dark transition">Reserve</button>
         </div>
-        <div className="text-gray-500 text-sm">You won't be charged yet</div>
+        <div className="text-gray-500 text-sm">You won&apos;t be charged yet</div>
         <div className="flex flex-col gap-1 text-gray-700 text-sm">
           <div>Check-in: <span className="font-medium">{property.availability?.checkInTime || '15:00'}</span></div>
           <div>Check-out: <span className="font-medium">{property.availability?.checkOutTime || '11:00'}</span></div>

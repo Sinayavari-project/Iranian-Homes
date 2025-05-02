@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Global Homes</h3>
             <p className="text-gray-400">
-              Find and book unique accommodations in the world's most beautiful destinations.
+              Find and book unique accommodations in the world&apos;s most beautiful destinations.
             </p>
           </div>
 
