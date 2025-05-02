@@ -1,15 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
+    env: {
+        MONGODB_URI: process.env.MONGODB_URI,
+    },
+    experimental: {
+        serverActions: true,
+    },
     images: {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'images.unsplash.com',
+                hostname: '**',
             },
         ],
-        domains: ['images.unsplash.com'],
     },
 }
 

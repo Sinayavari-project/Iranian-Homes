@@ -1,0 +1,296 @@
+[
+  {
+    "title": "Luxury Villa in Palm Jumeirah",
+    "summary": "Experience luxury living in a stunning Palm Jumeirah villa with private beach access.",
+    "description": "This exclusive villa offers breathtaking views of the Arabian Gulf, a private pool, and direct beach access. Enjoy modern amenities, spacious living areas, and a serene atmosphere in one of Dubai's most prestigious neighborhoods.",
+    "mainImage": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80"
+    ],
+    "location": {
+      "city": "Dubai",
+      "neighborhood": "Palm Jumeirah",
+      "area": "Palm Crescent",
+      "coordinates": { "latitude": 25.1124, "longitude": 55.1390 }
+    },
+    "propertyType": "villa",
+    "bedrooms": 5,
+    "bathrooms": 6,
+    "guests": 10,
+    "amenities": {
+      "basic": { "wifi": true, "airConditioning": true, "heating": true, "kitchen": true, "tv": true, "parking": true, "elevator": false },
+      "outdoor": { "pool": true, "garden": true, "balcony": true, "bbq": true, "privateYard": true },
+      "safety": { "securityCameras": true, "smokeAlarm": true, "firstAidKit": true, "fireExtinguisher": true, "doorman": true },
+      "convenience": { "washer": true, "dryer": true, "ironingEssentials": true, "workspace": true, "essentials": true }
+    },
+    "rules": {
+      "smoking": false,
+      "pets": true,
+      "parties": false,
+      "minimumStay": 2,
+      "quietHours": {
+        "start": "23:00",
+        "end": "08:00"
+      }
+    },
+    "contact": {
+      "whatsapp": "+989123456790",
+      "phone": "+981144556677",
+      "telegram": "@caspianluxury"
+    },
+    "features": {
+      "isFeatured": true,
+      "instantBook": true,
+      "superhost": true
+    },
+    "pricing": {
+      "basePrice": 12000000,
+      "weekendPrice": 15000000,
+      "weeklyDiscount": 15,
+      "monthlyDiscount": 25,
+      "cleaningFee": 2000000,
+      "deposit": 20000000
+    },
+    "availability": {
+      "checkInTime": "15:00",
+      "checkOutTime": "11:00",
+      "minStay": 2,
+      "maxStay": 14
+    },
+    "stats": {
+      "rating": 4.8,
+      "reviewCount": 32,
+      "viewCount": 890,
+      "bookingCount": 67
+    },
+    "languages": ["Persian", "English"],
+    "cancellationPolicy": "strict"
+  },
+  {
+    "title": "Modern Apartment in Downtown Dubai",
+    "summary": "Stylish apartment with breathtaking views of Burj Khalifa.",
+    "description": "Enjoy the heart of Dubai in this modern apartment featuring floor-to-ceiling windows, a fully equipped kitchen, and access to a gym and pool. Steps away from Dubai Mall and the vibrant Downtown district.",
+    "mainImage": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80"
+    ],
+    "location": {
+      "city": "Dubai",
+      "neighborhood": "Downtown",
+      "area": "Burj Khalifa District",
+      "coordinates": { "latitude": 25.1972, "longitude": 55.2744 }
+    },
+    "propertyType": "apartment",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "guests": 4,
+    "amenities": {
+      "basic": { "wifi": true, "airConditioning": true, "heating": false, "kitchen": true, "tv": true, "parking": true, "elevator": true },
+      "outdoor": { "pool": true, "garden": false, "balcony": true, "bbq": false, "privateYard": false },
+      "safety": { "securityCameras": true, "smokeAlarm": true, "firstAidKit": true, "fireExtinguisher": true, "doorman": true },
+      "convenience": { "washer": true, "dryer": true, "ironingEssentials": true, "workspace": true, "essentials": true }
+    },
+    "rules": {
+      "smoking": false,
+      "pets": false,
+      "parties": false,
+      "minimumStay": 3,
+      "quietHours": {
+        "start": "22:00",
+        "end": "08:00"
+      }
+    },
+    "contact": {
+      "whatsapp": "+989123456791",
+      "phone": "+982122334455",
+      "telegram": "@tehranluxury"
+    },
+    "features": {
+      "isFeatured": true,
+      "instantBook": true,
+      "superhost": true
+    },
+    "pricing": {
+      "basePrice": 8000000,
+      "weekendPrice": 9000000,
+      "weeklyDiscount": 10,
+      "monthlyDiscount": 20,
+      "cleaningFee": 1500000,
+      "deposit": 15000000
+    },
+    "availability": {
+      "checkInTime": "14:00",
+      "checkOutTime": "12:00",
+      "minStay": 3,
+      "maxStay": 30
+    },
+    "stats": {
+      "rating": 4.9,
+      "reviewCount": 28,
+      "viewCount": 750,
+      "bookingCount": 45
+    },
+    "languages": ["Persian", "English"],
+    "cancellationPolicy": "moderate"
+  },
+  {
+    "title": "Beachfront Villa in JBR",
+    "summary": "Beautiful beachfront villa with stunning sea views in Jumeirah Beach Residence.",
+    "description": "Wake up to the sound of waves in this luxurious villa located right on the beach. Features a private pool, spacious terrace, and direct access to the sand. Perfect for families or groups seeking a memorable Dubai getaway.",
+    "mainImage": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80"
+    ],
+    "location": {
+      "city": "Dubai",
+      "neighborhood": "JBR",
+      "area": "Beachfront",
+      "coordinates": { "latitude": 25.0799, "longitude": 55.1335 }
+    },
+    "propertyType": "villa",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "guests": 8,
+    "amenities": {
+      "basic": { "wifi": true, "airConditioning": true, "heating": true, "kitchen": true, "tv": true, "parking": true, "elevator": false },
+      "outdoor": { "pool": true, "garden": true, "balcony": true, "bbq": true, "privateYard": true },
+      "safety": { "securityCameras": true, "smokeAlarm": true, "firstAidKit": true, "fireExtinguisher": true, "doorman": true },
+      "convenience": { "washer": true, "dryer": true, "ironingEssentials": true, "workspace": true, "essentials": true }
+    },
+    "rules": {
+      "smoking": false,
+      "pets": true,
+      "parties": false,
+      "minimumStay": 2,
+      "quietHours": {
+        "start": "23:00",
+        "end": "08:00"
+      }
+    },
+    "contact": {
+      "whatsapp": "+989123456792",
+      "phone": "+983132224444",
+      "telegram": "@isfahanheritage"
+    },
+    "features": {
+      "isFeatured": true,
+      "instantBook": false,
+      "superhost": true
+    },
+    "pricing": {
+      "basePrice": 10000000,
+      "weekendPrice": 12000000,
+      "weeklyDiscount": 10,
+      "monthlyDiscount": 20,
+      "cleaningFee": 1500000,
+      "deposit": 18000000
+    },
+    "availability": {
+      "checkInTime": "15:00",
+      "checkOutTime": "11:00",
+      "minStay": 2,
+      "maxStay": 14
+    },
+    "stats": {
+      "rating": 4.9,
+      "reviewCount": 30,
+      "viewCount": 850,
+      "bookingCount": 60
+    },
+    "languages": ["Persian", "English"],
+    "cancellationPolicy": "strict"
+  },
+  {
+    "title": "Penthouse in Dubai Marina",
+    "summary": "Luxurious penthouse with panoramic marina views.",
+    "description": "Enjoy breathtaking views of Dubai Marina from this modern penthouse. Features a private pool, home theater, and spacious terrace. Perfect for those seeking the ultimate in luxury and privacy.",
+    "mainImage": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+    ],
+    "location": {
+      "city": "Dubai",
+      "neighborhood": "Dubai Marina",
+      "area": "Marina Walk",
+      "coordinates": { "latitude": 25.0817, "longitude": 55.1403 }
+    },
+    "propertyType": "penthouse",
+    "bedrooms": 3,
+    "bathrooms": 3.5,
+    "guests": 6,
+    "amenities": {
+      "basic": { "wifi": true, "airConditioning": true, "heating": true, "kitchen": true, "tv": true, "parking": true, "elevator": true },
+      "outdoor": { "pool": true, "garden": false, "balcony": true, "bbq": false, "privateYard": false },
+      "safety": { "securityCameras": true, "smokeAlarm": true, "firstAidKit": true, "fireExtinguisher": true, "doorman": true },
+      "convenience": { "washer": true, "dryer": true, "ironingEssentials": true, "workspace": true, "essentials": true }
+    }
+  },
+  {
+    "title": "Family Villa in Al Barsha",
+    "summary": "Spacious family villa with modern amenities in Al Barsha.",
+    "description": "A perfect choice for families, this villa features a private pool, garden, and easy access to Mall of the Emirates. Enjoy a peaceful stay in a residential neighborhood with all the comforts of home.",
+    "mainImage": "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5c?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+    ],
+    "location": {
+      "city": "Dubai",
+      "neighborhood": "Al Barsha",
+      "area": "Residential",
+      "coordinates": { "latitude": 25.1107, "longitude": 55.2038 }
+    },
+    "propertyType": "villa",
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "guests": 8,
+    "amenities": {
+      "basic": { "wifi": true, "airConditioning": true, "heating": true, "kitchen": true, "tv": true, "parking": true, "elevator": false },
+      "outdoor": { "pool": true, "garden": true, "balcony": true, "bbq": true, "privateYard": true },
+      "safety": { "securityCameras": true, "smokeAlarm": true, "firstAidKit": true, "fireExtinguisher": true, "doorman": true },
+      "convenience": { "washer": true, "dryer": true, "ironingEssentials": true, "workspace": true, "essentials": true }
+    }
+  },
+  {
+    "title": "Designer Loft in DIFC",
+    "summary": "Stylish loft apartment in Dubai's financial district.",
+    "description": "A modern loft with city views, high ceilings, and luxury finishes. Located in the heart of DIFC, close to fine dining and art galleries. Ideal for business travelers and couples.",
+    "mainImage": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503389152951-9c3d0c6b7a5c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+    ],
+    "location": {
+      "city": "Dubai",
+      "neighborhood": "DIFC",
+      "area": "Financial District",
+      "coordinates": { "latitude": 25.2048, "longitude": 55.2708 }
+    },
+    "propertyType": "loft",
+    "bedrooms": 1,
+    "bathrooms": 1.5,
+    "guests": 2,
+    "amenities": {
+      "basic": { "wifi": true, "airConditioning": true, "heating": true, "kitchen": true, "tv": true, "parking": true, "elevator": true },
+      "outdoor": { "pool": false, "garden": false, "balcony": true, "bbq": false, "privateYard": false },
+      "safety": { "securityCameras": true, "smokeAlarm": true, "firstAidKit": true, "fireExtinguisher": true, "doorman": true },
+      "convenience": { "washer": true, "dryer": true, "ironingEssentials": true, "workspace": true, "essentials": true }
+    }
+  }
+] 

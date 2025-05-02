@@ -18,6 +18,15 @@ export const translations = {
       title: "Featured Properties",
       perNight: "per night"
     },
+    properties: {
+      title: "Our Properties",
+      bedrooms: "Bedrooms",
+      bathrooms: "Bathrooms",
+      guests: "Guests",
+      amenities: "Amenities",
+      reserve: "Reserve",
+      perNight: "per night"
+    },
     destinations: [
       { id: 1, name: "Paris, France" },
       { id: 2, name: "Bali, Indonesia" },
@@ -44,6 +53,15 @@ export const translations = {
       title: "اقامتگاه‌های ویژه",
       perNight: "هر شب"
     },
+    properties: {
+      title: "اقامتگاه‌های ما",
+      bedrooms: "اتاق خواب",
+      bathrooms: "حمام",
+      guests: "مهمان",
+      amenities: "امکانات",
+      reserve: "رزرو",
+      perNight: "هر شب"
+    },
     destinations: [
       { id: 1, name: "پاریس، فرانسه" },
       { id: 2, name: "بالی، اندونزی" },
@@ -53,4 +71,52 @@ export const translations = {
       { id: 6, name: "دبی، امارات" }
     ]
   }
-}; 
+};
+
+export const locationTranslations = {
+  en: {
+    cities: {
+      'Tehran': 'Tehran',
+      'Isfahan': 'Isfahan',
+      'Kashan': 'Kashan'
+    },
+    states: {
+      'Tehran Province': 'Tehran Province',
+      'Isfahan Province': 'Isfahan Province'
+    },
+    countries: {
+      'Iran': 'Iran'
+    },
+    areas: {
+      'Niavaran': 'Niavaran',
+      'North Tehran': 'North Tehran',
+      'Chaharbagh Boulevard': 'Chaharbagh Boulevard',
+      'Historic District': 'Historic District'
+    }
+  },
+  fa: {
+    cities: {
+      'Tehran': 'تهران',
+      'Isfahan': 'اصفهان',
+      'Kashan': 'کاشان'
+    },
+    states: {
+      'Tehran Province': 'استان تهران',
+      'Isfahan Province': 'استان اصفهان'
+    },
+    countries: {
+      'Iran': 'ایران'
+    },
+    areas: {
+      'Niavaran': 'نیاوران',
+      'North Tehran': 'شمال تهران',
+      'Chaharbagh Boulevard': 'خیابان چهارباغ',
+      'Historic District': 'محله تاریخی'
+    }
+  }
+};
+
+export function translateLocation(text: string, type: 'cities' | 'states' | 'countries' | 'areas', language: string): string {
+  const translations = locationTranslations[language as keyof typeof locationTranslations];
+  return translations[type][text as keyof typeof translations[typeof type]] || text;
+} 
