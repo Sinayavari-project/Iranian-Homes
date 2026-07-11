@@ -12,6 +12,8 @@ public struct SofrinoProductCard: View {
     private let imageURL: URL?
     private let name: String
     private let supplierName: String
+    private let isSupplierVerified: Bool
+    private let deliveryEstimate: String?
     private let priceText: String
     private let unitText: String?
     private let badge: (text: String, style: SofrinoBadgeStyle)?
@@ -23,6 +25,8 @@ public struct SofrinoProductCard: View {
         imageURL: URL?,
         name: String,
         supplierName: String,
+        isSupplierVerified: Bool = false,
+        deliveryEstimate: String? = nil,
         priceText: String,
         unitText: String? = nil,
         badge: (text: String, style: SofrinoBadgeStyle)? = nil,
@@ -33,6 +37,8 @@ public struct SofrinoProductCard: View {
         self.imageURL = imageURL
         self.name = name
         self.supplierName = supplierName
+        self.isSupplierVerified = isSupplierVerified
+        self.deliveryEstimate = deliveryEstimate
         self.priceText = priceText
         self.unitText = unitText
         self.badge = badge
@@ -70,10 +76,17 @@ public struct SofrinoProductCard: View {
                         .multilineTextAlignment(.leading)
                         .frame(minHeight: 44, alignment: .top)
 
-                    Text(supplierName)
-                        .sofrinoTextStyle(SofrinoTypography.bodySM)
-                        .foregroundStyle(SofrinoColor.Neutral.n500)
-                        .lineLimit(1)
+                    HStack(spacing: SofrinoSpacing.space1) {
+                        Text(supplierName)
+                            .sofrinoTextStyle(SofrinoTypography.bodySM)
+                            .foregroundStyle(SofrinoColor.Neutral.n500)
+                            .lineLimit(1)
+                        if isSupplierVerified {
+                            Image(systemName: "checkmark.seal.fill")
+                                .font(.system(size: 10))
+                                .foregroundStyle(SofrinoColor.verifiedGold)
+                        }
+                    }
 
                     HStack(alignment: .firstTextBaseline, spacing: SofrinoSpacing.space1) {
                         Text(priceText)
@@ -86,6 +99,22 @@ public struct SofrinoProductCard: View {
                         }
                     }
                     .padding(.top, SofrinoSpacing.space1)
+
+                    // Always reserve this row's height, even with no
+                    // delivery estimate to show — two cards side by side
+                    // in the same grid row with and without this line
+                    // would otherwise sit at different heights and misalign.
+                    HStack(spacing: SofrinoSpacing.space1) {
+                        Image(systemName: "shippingbox")
+                            .font(.system(size: 10))
+                        Text(deliveryEstimate ?? " ")
+                            .sofrinoTextStyle(SofrinoTypography.labelSM)
+                            .lineLimit(1)
+                    }
+                    .foregroundStyle(SofrinoColor.Neutral.n400)
+                    .padding(.top, 2)
+                    .opacity(deliveryEstimate == nil ? 0 : 1)
+                    .accessibilityHidden(deliveryEstimate == nil)
                 }
                 .padding(SofrinoSpacing.space5)
             }
@@ -133,6 +162,8 @@ private struct SofrinoCardTapStyle: ButtonStyle {
             imageURL: nil,
             name: "Wild-Caught Norwegian Salmon",
             supplierName: "Nordic Seafood Co.",
+            isSupplierVerified: true,
+            deliveryEstimate: "2-day delivery",
             priceText: "AED 89.00",
             unitText: "/ kg",
             badge: (text: "Fresh", style: .success),

@@ -80,6 +80,8 @@ public struct ProductListView: View {
                         imageURL: product.imageURL,
                         name: product.name,
                         supplierName: product.supplier.name,
+                        isSupplierVerified: product.supplier.isVerified,
+                        deliveryEstimate: product.supplier.deliveryEstimate,
                         priceText: product.price.formatted,
                         unitText: "/ \(product.unit)",
                         badge: badge(for: product)

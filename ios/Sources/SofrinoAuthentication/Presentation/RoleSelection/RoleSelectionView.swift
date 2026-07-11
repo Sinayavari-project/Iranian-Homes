@@ -41,6 +41,11 @@ public struct RoleSelectionView: View {
                 ) {
                     Task { await viewModel.confirmSelection() }
                 }
+
+                Text("Need to switch later? Just reach out to support.")
+                    .sofrinoTextStyle(SofrinoTypography.bodySM)
+                    .foregroundStyle(SofrinoColor.Neutral.n400)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
             .padding(.horizontal, SofrinoSpacing.screenMargin)
             .padding(.top, SofrinoSpacing.space10)
@@ -55,7 +60,7 @@ public struct RoleSelectionView: View {
             Text("How will you use Sofrino?")
                 .sofrinoTextStyle(SofrinoTypography.displayXL)
                 .foregroundStyle(SofrinoColor.Neutral.n900)
-            Text("This decides what your home screen looks like. You can't change it later without contacting support.")
+            Text("This shapes everything you see next — pick whichever matches what you do today.")
                 .sofrinoTextStyle(SofrinoTypography.bodyLG)
                 .foregroundStyle(SofrinoColor.Neutral.n500)
         }
