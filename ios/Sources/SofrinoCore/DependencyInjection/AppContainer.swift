@@ -39,5 +39,9 @@ public final class AppContainer {
             // repository instead of reading `httpClient`.
             self.httpClient = nil
         }
+
+        Task.detached(priority: .background) {
+            await ImageDiskCache.shared.evictEntries(olderThan: 7 * 24 * 60 * 60)
+        }
     }
 }

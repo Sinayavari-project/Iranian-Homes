@@ -8,14 +8,17 @@ import SwiftUI
 /// cards) composes from this one primitive plus `SofrinoSkeletonCircle`.
 public struct SofrinoSkeletonBlock: View {
     private let width: CGFloat?
-    private let height: CGFloat
+    private let height: CGFloat?
     private let cornerRadius: CGFloat
 
     @State private var phase: CGFloat = -1
     @Environment(\.layoutDirection) private var layoutDirection
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    public init(width: CGFloat? = nil, height: CGFloat, cornerRadius: CGFloat = 4) {
+    /// Pass `nil` for `width` and/or `height` to fill the parent's proposed
+    /// size along that axis instead of a fixed dimension — used by
+    /// `SofrinoRemoteImage` to fill whatever frame the caller gives the image.
+    public init(width: CGFloat? = nil, height: CGFloat? = nil, cornerRadius: CGFloat = 4) {
         self.width = width
         self.height = height
         self.cornerRadius = cornerRadius
